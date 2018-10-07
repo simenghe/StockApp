@@ -24,6 +24,8 @@
                 //stop from defaulting to submitting to a file
                 e.preventDefault();
                 const item=document.querySelector('#item').value;
+                //sends the item
+                ipcRenderer.send('item:add',item);
             }
         </script>
     </body>

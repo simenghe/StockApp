@@ -5,5 +5,28 @@
     </head>
     <body>
         <h1>Stocking App</h1>
+        <ul></ul>
+
+        <script>
+            const electron=require('electron');
+            const {ipcRenderer} = electron;
+            const ul = document.querySelector('ul');
+            //Add item
+            ipcRenderer.on('item:add',function(e,item){ //refer to DOM video
+                const li = document.createElement('li');
+                const itemText = document.createTextNode(item);
+                li.appendChild(itemText);
+                ul.appendChild(li);
+            });
+
+            ipcRenderer.on('item:clear',function(e,item){ //refer to DOM video
+               ul.innerHTML='';
+            });
+
+            function removeItem(e){
+                e.target.remove();
+            }
+            // Clear items
+        </script>
     </body>
 </html>
