@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Add Stock</title>
+    </head>
+    <body>
+        <form>
+            <div>
+                <label>Enter Stock org</label>
+                <input type="text" id="item" autofocus>
+            </div>
+            <button type="submit">add Stock</button>
+        </form>
+        <script>
+            const electron = require('electron');
+            const {ipcRenderer}=electron;
+
+        
+            //catch the text
+            const form=document.querySelector('form');
+            form.addEventListener('submit',submitForm);
+
+            function submitForm(e){
+                //stop from defaulting to submitting to a file
+                e.preventDefault();
+                const item=document.querySelector('#item').value;
+            }
+        </script>
+    </body>
+</html>
