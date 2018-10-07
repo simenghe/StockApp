@@ -1,0 +1,14 @@
+{
+  "name": "stockapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Simeng He",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^3.0.3"
+  }
+}
